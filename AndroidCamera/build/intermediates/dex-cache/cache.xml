@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-v13/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="9abf11d546d9e0ee82da86df608ced7a961b76ac">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v13-25.0.1_9567f0031adbe57c3271feb51e13ff7fd115debe.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-v4/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-v4-25.0.1_d4a804cfd2a03ab24e695b60116f79a4925f0fcd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c5b7145fb34779b6639147b8f2f8dd77c0db771b">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_c28ec1b4f69b90530710849b6adb4c0e05f39aff.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6a1479afe9f1b3645e1cd9a87318976893472818">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-media-compat-25.0.1_7fd87e7ea06c0bd0d225676e14c9bae7dd99bc72.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b24e1c688744078e1fa833ffadf696794761bbe5">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-vector-drawable-25.0.1_95748eeecd706f980e8a6ab1f52a90db98800054.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/19.0/6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9/guava-19.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ce200f6b23222af3d8abb6b6459e6c44f4bb0e9">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/guava-19.0_77adfd9f8780315da862ed28399f9fda34c0acb9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f83b00041ecfba705603fec40363416c7de69719">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_3fd94f7f64bbad212eb3ef6ccaea343b5867f23e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e5343c9d19cb19ff55f6b268c7f3fe8c9d224f6f">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_cdcb86c76a2cd96539488d50348a2a45d988808e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="1108575c7dc7b7f5b378b3290ac90de81a9b8830">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-cardview-v7-25.0.1_5d21194dfb23e49a8e0a140afb84fa640b08852e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="f7ac4b327fdb9e2ee386f5adc46164927658de4b">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-25.0.1_df17b40d4261c89d987164a2c8e79e4e4b4ef36d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="51eba4a4dd73044f90a9d58dd7ca34adbebfcf4e">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-compat-25.0.1_0b95ec34b552164ec53dc5fd2fe0023f3119f51b.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/Android/Sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/constraint-layout-solver-1.0.2_64cc31ead8ea8edda7f30ff1e0fade58fde9ee51.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-compat/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="3af8cc51ef7088e56f132780da8c0bd858b6a6ad">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_df24eb8b527a753d33102b7a586cc1602525006f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-v13/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cfb91ea7c6890336890ccb42767041af6b863e32">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_a9b5f4df1616c888a747ddd387ba7c35e22bbff8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="00d4c8eebf2b681073c72a26bd0849549e51c7cb">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-core-utils-25.0.1_ebe79c9c574b6e6591fd936d13c915be8b83cd0c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/libs/internal_impl-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c0bd6ffb002a85b5e7cad29f8558d1cc59539679">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/internal_impl-25.0.1_c93a74c6ad1a66437ea76047a79f86fb64191870.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bc7e99e8d0fc279a05aa91378530f467ad62d443">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-core-ui-25.0.1_ea94022dc69ebed8114d66abd4eb05a842b2b490.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/support-fragment/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="26c6eef571592c91f29e56fda0bac73321de0c92">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-support-fragment-25.0.1_4c2244ad25b895b2fac77361b63b420da3d9b6bf.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support.constraint-constraint-layout-1.0.2_f15f9468f32fcd8edaed4eb50e0462f907e3eb0c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.0.1/support-annotations-25.0.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="a09194311f8f89c3e6db09d79f50897a889d615e">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/support-annotations-25.0.1_d25fa4dcaacb2e1d35ae95ed2fd019345424c645.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.0.1/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="772bed2d992b67b9d0327f766cc95cd63031dcd3">
+        <dex dex="/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/pre-dexed/debug/com.android.support-animated-vector-drawable-25.0.1_9baf6816ce8440f6152253166b6d95be55c85620.jar" />
+    </item>
+
+</items>
