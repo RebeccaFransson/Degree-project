@@ -24,7 +24,7 @@ class Image extends Component {
 
   componentDidMount(){
     console.log('här sparar vi bilden')
-    location.href = this.state.src
+    location.href = this.state.src.replace(/^data:image\/[^;]/, 'data:application/octet-stream')
     
   }
 
