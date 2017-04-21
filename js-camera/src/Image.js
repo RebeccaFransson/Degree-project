@@ -2,36 +2,26 @@ import React, { Component } from 'react'
 
 class Image extends Component {
 
-  constructor(props) {
-      console.log(props)
-    super(props)
-    this.state ={
-        src: null,
-    }
-  }
-  componentWillMount(){
-    console.log('skapar canvas')
-    const canvas = document.createElement('canvas')
+  componentDidMount(){
+    //skapar en canvas
+    const canvas = document.getElementById("canvas")
+    console.log(canvas)
     const context = canvas.getContext('2d')
     context.drawImage(this.props.video, 0, 0, 300, 150)
-    console.log(canvas)
-    const src = canvas.toDataURL("image/png")
-    this.setState({
-        src,
-    })
 
-  }
+    //Gör om canvas till png
+    const src = canvas.toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream')
 
-  componentDidMount(){
-    console.log('här sparar vi bilden')
-    location.href = this.state.src.replace(/^data:image\/[^;]/, 'data:application/octet-stream')
-    
+    //sparar bilden
+    location.href = src
   }
 
   render() {
-      console.log('render ')
     return (
-      <image src={this.state.src}/>
+        <div>
+          <canvas id='canvas'/>
+          <p>Time for this benchmark was:</p>
+        </div>
     )
   }
 }
