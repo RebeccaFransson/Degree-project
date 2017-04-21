@@ -24,12 +24,11 @@
 video, canvas {
   background: rgba(255,255,255,0.5);
   border: 1px solid #ccc;
-  margin-top: 20px;
+  margin: 20px 10px 20px 10px;
   width: 407px;
   height: 305px;
 }
 
 #showing{
   width: 100%;
-  background-color: pink;
 }

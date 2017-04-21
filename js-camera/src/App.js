@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import './App.css'
+import Image from './Image'
 
 class App extends Component {
 
@@ -7,6 +8,7 @@ class App extends Component {
     super(props)
     this.state = {
       showCamera: false,
+      allDone: null,
     }
   }
 
@@ -17,34 +19,31 @@ class App extends Component {
     })
   }
 
-  takePicture = () => {
-    console.log('tar bild')
-    var canvas = document.getElementById('canvas')
-    var context = canvas.getContext('2d')
-    
-    context.drawImage(document.getElementById('video'), 0, 0, 300, 150)
-    
-  }
-
-  componentDidUpdate(){
+  componentDidUpdate = () => {
     console.log('update')
-    var video = document.getElementById('video')
-    if(video != null){
-      const { takePicture } = this
+    const that = this
+    if(this.state.showCamera){
+      console.log('öppnar kameran')
+      const video = document.getElementById('video')
+      const { takePicture, savePicture } = this
       if(navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
-          navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
-              video.src = window.URL.createObjectURL(stream)
-              video.play()
-              console.log('Öppnar video')
-              takePicture()
-          })
+        navigator.mediaDevices.getUserMedia({ video: true }).then(function(stream) {
+            video.src = window.URL.createObjectURL(stream)
+            video.play()
+            console.log('Video öppnad')
+            setTimeout(()=>{//Sätter en timeout så jag är säker påatt kameran komemr igång
+              that.setState({
+                showCamera: false,
+                allDone: video,
+              })
+            }, 1000)
+        })
       }
     }
   }
 
-
   render() {
-  const { showCamera } = this.state
+  const { showCamera, allDone } = this.state
     return (
       <div className="App">
         <div className="App-header">
@@ -53,16 +52,22 @@ class App extends Component {
         { showCamera ?
           <div id='showing'>
             <video id='video' autoPlay></video>
-            <button onClick={this.takePicture}> Snapshot </button>
-            <canvas id='canvas'></canvas>
           </div>
           :
-          <button onClick={this.activateCamera}> Activate Cameratest </button>
+          <div>
+          {allDone ?
+            <Image video={allDone}/>
+            :
+            <button onClick={this.activateCamera}> Activate Cameratest </button>
+          }
+            
+          </div> 
         }
+        
         
       </div>
     )
   }
 }
-
+//<button onClick={this.takePicture}> Snapshot </button>
 export default App
