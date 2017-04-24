@@ -18,22 +18,27 @@ class CameraWithExperimental extends React.Component {
     console.log('hehe')
     return navigator.mediaDevices.enumerateDevices()
       .then(devices => {
-        let device = devices.find(({kind, label}) => 
-          kind === 'videoinput' && label.indexOf('back') !== -1
-        )
-        console.log('Found back cam', device)
-        if (device) return device
+        // let device = devices.find(({kind, label}) => 
+        //   kind === 'videoinput' && label.indexOf('back') !== -1
+        // )
+        // console.log('Found back cam', device)
+        // if (device) return device
 
-        console.log('No back cam, using first videoinput', device)
-        device = device.find(({kind}) => kind === 'videoinput')
-        if (device) return device
-
-        throw new Error('No Video Device Found!')
+        // console.log('No back cam, using first videoinput', device)
+        // device = devices.find(({kind}) => kind === 'videoinput')
+        // if (device) return device
+        const videoDevices = devices.filter(({kind}) => kind === 'videoinput')
+        return videoDevices[1]
+        
     })
     .then(device => {
-      console.log(device)
-      return navigator.mediaDevices.getUserMedia({video: {deviceId: device.deviceId}})
+      console.log(device.deviceId)
+      const constraints = {
+        video: {deviceId: device.deviceId}
+      };
+      return navigator.mediaDevices.getUserMedia(constraints)
     })
+    .catch(err => console.error(err))
   }
 
   getStream() {
@@ -49,9 +54,26 @@ class CameraWithExperimental extends React.Component {
         return stream
       })
       .then(stream => stream.getVideoTracks()[0])
-      .then(videoTrack => new ImageCapture(videoTrack))
-      .then(imageCapture => imageCapture.takePhoto())
+      .then(videoTrack => {
+        console.log(videoTrack)
+        const capturer = new ImageCapture(videoTrack)
+        console.log(capturer)
+        capturer.setOptions({
+          imageWidth: 4000,
+          imageHeight: 3000,
+        })
+        console.log('setOptions')
+        return capturer
+      })
+      .then(imageCapture => {
+        console.log(imageCapture)
+        const blob = imageCapture.takePhoto()
+        console.log(blob)
+        return blob
+      })
       .then(blob => {
+        console.log(blob)
+        const video = document.querySelector('#video')
         const fileSaver = FileSaver.saveAs(blob, 'image.png')
         fileSaver.onwriteend = (args) => {
           performance.mark('end_cam_experimental')
@@ -67,6 +89,8 @@ class CameraWithExperimental extends React.Component {
           this.setState((prevState, props) => ({redirect: '/'}))
         }        
       })
+      // .catch(error => console.error(error))
+      
   }
 
 
