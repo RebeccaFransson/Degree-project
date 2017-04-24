@@ -5,12 +5,13 @@ class Image extends Component {
   componentDidMount(){
     //skapar en canvas
     const canvas = document.getElementById("canvas")
-    console.log(canvas)
     const context = canvas.getContext('2d')
     context.drawImage(this.props.video, 0, 0, 300, 150)
 
     //Gör om canvas till png
-    const src = canvas.toDataURL("image/png").replace(/^data:image\/[^;]/, 'data:application/octet-stream')
+    const src = canvas
+      .toDataURL("image/png")
+      .replace(/^data:image\/[^;]/, 'data:application/octet-stream')
 
     //sparar bilden
     location.href = src
