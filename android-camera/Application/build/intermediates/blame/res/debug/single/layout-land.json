@@ -2,5 +2,9 @@
     {
         "merged": "/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/res/merged/debug/layout-land/fragment_camera2_basic.xml",
         "source": "/home/ruski/development/school/degree-project/android-Camera2Basic/Application/src/main/res/layout-land/fragment_camera2_basic.xml"
+    },
+    {
+        "merged": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/res/merged/debug/layout-land/fragment_camera2_basic.xml",
+        "source": "/home/ruski/development/school/Degree-project/android-camera/Application/src/main/res/layout-land/fragment_camera2_basic.xml"
     }
 ]

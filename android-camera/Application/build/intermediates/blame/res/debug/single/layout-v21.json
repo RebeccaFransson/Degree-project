@@ -1,7 +1,23 @@
 [
     {
+        "merged": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/res/merged/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
         "merged": "/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
         "source": "/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/res/merged/debug/layout-v21/notification_action.xml",
+        "source": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout-v21/notification_action_tombstone.xml"
+    },
+    {
+        "merged": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/res/merged/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/ruski/development/school/Degree-project/android-camera/Application/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.0.1/res/layout-v21/notification_template_custom_big.xml"
     },
     {
         "merged": "/home/ruski/development/school/degree-project/android-Camera2Basic/Application/build/intermediates/res/merged/debug/layout-v21/notification_action_tombstone.xml",
