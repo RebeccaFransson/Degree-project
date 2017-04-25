@@ -6,6 +6,7 @@ import {
   Switch
 } from 'react-router-dom'
 import CameraWithExperimental from './components/camera-with-experimental'
+import CameraWithCanvas from './components/camera-with-canvas'
 import Camera from './components/camera'
 import './App.css'
 
@@ -14,11 +15,11 @@ const App = () =>
     <div>
       <ul>
         <li><Link to='/camera-with-experimental'>Camera with experimental features(ImageCapture)</Link></li>
-        <li><Link to='/camera'>Camera with ordinary features(Canvas to png)</Link></li>
+        <li><Link to='/camera-with-canvas'>Camera with ordinary features(Canvas to png)</Link></li>
       </ul>
     <Switch>
       <Route component={CameraWithExperimental} path='/camera-with-experimental' />
-      <Route component={Camera} path='/camera' />
+      <Route component={CameraWithCanvas} path='/camera-with-canvas' />
     </Switch>
     </div>
   </Router>

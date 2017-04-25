@@ -10,9 +10,8 @@ class CameraWithExperimental extends React.Component {
   }
   constructor(props) {
     super(props)
-    console.log('Start')
     performance.mark('start_cam_experimental')
-    this.getStream()
+    this.start()
   }
 
   getDevice(devices) {
@@ -37,7 +36,7 @@ class CameraWithExperimental extends React.Component {
     .catch(err => console.error(err))
   }
 
-  getStream() {
+  start() {
     this.getUserMedia()
       .then(stream => {
         this.setState((prevState, props) => ({
