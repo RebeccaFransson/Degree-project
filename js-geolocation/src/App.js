@@ -1,13 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import {
+  BrowserRouter as Router, 
+  Route, 
+  Link, 
+  Switch
+} from 'react-router-dom'
+
+import Geolocation from './components/geolocation'
 
 class App extends Component {
+
   render() {
     return (
-      <div className="App">
-        
-      </div>
+      <Router>
+        <div className="App">
+          <Link to='/geolocation'>Start geolocation test</Link>
+
+          <Switch>
+            <Route component={Geolocation} path='/geolocation' />
+          </Switch>
+        </div>
+      </Router>
     );
   }
 }
