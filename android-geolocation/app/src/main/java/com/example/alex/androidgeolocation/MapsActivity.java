@@ -19,6 +19,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.CameraPosition;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.common.base.Stopwatch;
@@ -91,9 +92,16 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mLocation = LocationServices.FusedLocationApi.getLastLocation(mClient);
         if (mLocation != null) {
             LatLng myLocation = new LatLng(mLocation.getLatitude(), mLocation.getLongitude());
+
             mMap.addMarker(new MarkerOptions().position(myLocation).title("My Location"));
-            mMap.moveCamera(CameraUpdateFactory.newLatLng(myLocation));
-            mMap.animateCamera(CameraUpdateFactory.zoomTo(15f));
+
+            CameraPosition cameraPosition = new CameraPosition.Builder()
+                    .target(myLocation)
+                    .zoom(15).build();
+            //Zoom in and animate the camera.
+            mMap.moveCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+            //mMap.animateCamera(CameraUpdateFactory.newCameraPosition(cameraPosition));
+
             System.out.println("YOLO: marker added");
 
 
@@ -113,12 +121,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     @Override
     public void onMapLoaded() {
+        System.out.println("YOLO: Map Loaded");
         stopwatch.stop();
         long elapsed = stopwatch.elapsed(TimeUnit.NANOSECONDS);
-        System.out.print("Time elapsed: ");
+        System.out.print("YOLO: Time elapsed: ");
         System.out.print(elapsed);
         System.out.println(" nanoseconds");
         Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
+
     }
 }
