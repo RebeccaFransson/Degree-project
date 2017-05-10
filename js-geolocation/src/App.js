@@ -7,18 +7,23 @@ import {
   Switch
 } from 'react-router-dom'
 
-import Geolocation from './components/geolocation'
+import Main from './components/main'
+import MapComponent from './components/map-component'
+import {getUserLocation} from './lib/location'
 
 class App extends Component {
+
+  componentDidMount() {
+    getUserLocation()
+  }
 
   render() {
     return (
       <Router>
         <div className="App">
-          <Link to='/geolocation'>Start geolocation test</Link>
-
           <Switch>
-            <Route component={Geolocation} path='/geolocation' />
+            <Route component={MapComponent} path='/geolocation' />
+            <Route component={Main} path='/' />
           </Switch>
         </div>
       </Router>
