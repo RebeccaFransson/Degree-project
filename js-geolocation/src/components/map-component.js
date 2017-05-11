@@ -5,12 +5,15 @@ import Marker from 'react-google-maps/lib/Marker'
 import GoogleMap from 'react-google-maps/lib/GoogleMap'
 import {getUserLocation} from '../lib/location'
 
+const {performance} = window
+
 const AsyncGoogleMap = withScriptjs(withGoogleMap(
-  (({onMapLoad, myPosition}) => (
+  (({onMapLoad, myPosition, onTilesLoaded}) => (
     <GoogleMap
       ref={onMapLoad}
       defaultZoom={15}
       onClick={() => {}}
+      onTilesLoaded={onTilesLoaded}
     >
       {myPosition &&
         <Marker
@@ -25,7 +28,21 @@ const AsyncGoogleMap = withScriptjs(withGoogleMap(
 export default class MapComponent extends Component {
   constructor(props) {
     super(props)
-    getUserLocation()
+    performance.mark('start_pwa_geo_benchmark')
+  }
+
+  state = {
+    myPosition: undefined,
+  };
+
+  componentWillUnmount() {
+    this._mapComponent = null
+  }
+
+  handleMapLoad = (map) => {
+    if (map) {
+      this._mapComponent = map;
+      getUserLocation()
       .then(({coords: {latitude, longitude}}) => {
         this.setState((prevState, props) => ({
           myPosition: {
@@ -41,15 +58,16 @@ export default class MapComponent extends Component {
       .then(({latitude, longitude}) => {
         this._mapComponent.panTo({lat: latitude, lng: longitude})
       })
-
+    } 
   }
-
-  state = {
-    myPosition: undefined,
-  };
-
-  handleMapLoad = (map) => {
-    this._mapComponent = map;
+  
+  handleTilesLoad = () => {
+    performance.mark('end_pwa_geo_benchmark')
+    performance.measure('pwa_geo_benchmark', 'start_pwa_geo_benchmark', 'end_pwa_geo_benchmark')
+    const {duration} = performance.getEntriesByType('measure')[0]
+    performance.clearMarks()
+    performance.clearMeasures()
+    console.log('Bencmark end: ', duration)
   }
 
 
@@ -58,8 +76,16 @@ export default class MapComponent extends Component {
       <AsyncGoogleMap
         googleMapURL="//maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAgvmFuIojQ0ATclnZS_0R9KgTDFFRuCH8"
         loadingElement={
-          <div style={{ height: `100%` }}>
-            <h1>Loading</h1>
+          <div style={{
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: '100vw',
+            height: '100vh'
+
+          }}>
+            <h3>LOADING...</h3>
           </div>
         }
         containerElement={
@@ -69,6 +95,7 @@ export default class MapComponent extends Component {
           <div style={{ height: `100vh`, width: '100vw' }} />
         }
         onMapLoad={this.handleMapLoad}
+        onTilesLoaded={this.handleTilesLoad}
         myPosition={this.state.myPosition}
       />
     );
